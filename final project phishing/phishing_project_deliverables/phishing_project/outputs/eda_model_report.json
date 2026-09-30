@@ -1,0 +1,79 @@
+{
+  "n_rows_raw": 11055,
+  "n_features": 30,
+  "missing_values": 0,
+  "duplicate_rows": 5206,
+  "class_balance": {
+    "0": 6157,
+    "1": 4898
+  },
+  "top_10_correlated_features": {
+    "sslfinal_state": -0.715,
+    "url_of_anchor": -0.693,
+    "prefix_suffix": -0.349,
+    "web_traffic": -0.346,
+    "having_sub_domain": -0.298,
+    "request_url": -0.253,
+    "links_in_tags": -0.248,
+    "domain_registration_length": 0.226,
+    "sfh": -0.221,
+    "google_index": -0.129
+  },
+  "leakage_check": "No feature has |corr| > 0.9 with label -> no obvious leakage.",
+  "train_size": 8844,
+  "test_size": 2211,
+  "model_results": {
+    "Logistic Regression": {
+      "accuracy": 0.9281,
+      "precision": 0.9344,
+      "recall": 0.901,
+      "f1_score": 0.9174,
+      "roc_auc": 0.9785,
+      "confusion_matrix": [
+        [
+          1169,
+          62
+        ],
+        [
+          97,
+          883
+        ]
+      ]
+    },
+    "Decision Tree": {
+      "accuracy": 0.9349,
+      "precision": 0.9419,
+      "recall": 0.9092,
+      "f1_score": 0.9252,
+      "roc_auc": 0.9847,
+      "confusion_matrix": [
+        [
+          1176,
+          55
+        ],
+        [
+          89,
+          891
+        ]
+      ]
+    },
+    "KNN (k=7)": {
+      "accuracy": 0.9448,
+      "precision": 0.9525,
+      "recall": 0.9214,
+      "f1_score": 0.9367,
+      "roc_auc": 0.9876,
+      "confusion_matrix": [
+        [
+          1186,
+          45
+        ],
+        [
+          77,
+          903
+        ]
+      ]
+    }
+  },
+  "best_model": "KNN (k=7)"
+}
